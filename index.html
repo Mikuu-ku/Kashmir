@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Kash</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/jpeg" href="images/">
+</head>
+<body>
+
+    <div id="loading-screen">
+        <div class="loader-leaf">💚</div>
+        <p class="loading-text">Preparing your surprise...</p>
+    </div>
+
+    <audio id="openSound" src="audio/paper_rustling.mp3"></audio>
+    <audio id="magicSound" src="audio/chime.mp3"></audio>
+    <audio id="bgMusic" src="audio/Pasilyo.mp3" loop></audio>
+
+    <div id="heart-container"></div>
+    <button id="muteBtn" class="mute-style">🔊</button>
+
+    <div id="photo-modal" class="modal-hidden">
+        <div class="polaroid-container">
+            <span class="close-modal">&times;</span>
+            <div class="polaroid-card">
+                <div class="photo-area">
+                    <img id="popup-img" src="" alt="Memory">
+                </div>
+                <p id="modal-text"></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="letter-modal" class="letter-modal-hidden">
+        <div class="letter-content">
+            <span class="close-letter">&times;</span>
+            <div class="letter-paper">
+                <h2>Mga Vavaye,</h2>
+                <div id="typewriter-text" class="letter-body"></div>
+                <p class="signature">- Kash</p> 
+            </div>
+        </div>
+    </div>
+
+    <main class="main-container">
+        
+        <section id="envelope-page">
+            <div class="envelope-wrapper" id="wrapper">
+                <div class="envelope-back"></div>
+                
+                <div class="paper">
+                    <p class="paper-text">Di ni surprise goy...</p>
+                    
+                    <div id="together-counter" class="counter-style">
+                        <span id="days-value">Loading memories...</span>
+                    </div>
+
+                    <div class="names-container">
+                        <p class="names">To: Mga Vavaye💚</p>
+                        <p class="names">From: Kash</p>
+                    </div>
+                </div>
+
+                <div class="envelope-front"></div>
+                <div class="flap"></div>
+                <button class="seal" id="sealButton">💚</button>
+            </div>
+            <h2 class="instruction">TAP THE HEART TO OPEN YOUR GIFT</h2>
+        </section>
+
+        <section id="bouquet-page" class="hidden">
+            <div class="bouquet-display">
+                <div class="fairy-lights"></div>
+                
+                <div class="bouquet" id="mainBouquet">
+                    
+                    <div class="flower orchid interactive" 
+                         data-note="Bagay lang be." 
+                         data-img="images/sheena.jpg"> 
+                         <div class="petal-back"></div>
+                         <div class="petal-inner"></div>
+                         <div class="orchid-center"></div>
+                    </div>
+
+                    <div class="flower tulip t-left interactive" 
+                         data-note="Cutie." 
+                         data-img="images/jorsal.jpg"></div>
+                    
+                    <div class="flower tulip t-right interactive" 
+                         data-note="Laag ginagmay" 
+                         data-img="images/5v5.jpg"></div>
+
+                    <div class="flower rose r-left interactive" 
+                         data-note="Mga Vavaye" 
+                         data-img="images/trio.jpg">
+                        <div class="rose-inner"></div>
+                    </div>
+                    
+                    <div class="flower rose r-right interactive" 
+                         data-note="Ambot uy" 
+                         data-img="images/trio2.jpg">
+                        <div class="rose-inner"></div>
+                    </div>
+                    
+                    <div class="stem">
+                        <div class="leaf leaf-left"></div>
+                        <div class="leaf leaf-right"></div>
+                    </div>
+                </div>
+
+                <div class="text-content">
+                    <h1 class="main-title">Happy Valentine's Day!</h1>
+                    <p class="subtitle">Salamat ha!</p>
+                    <div class="button-group">
+                        <button id="final-letter-btn" class="btn-primary hidden">Read My Letter ✉️</button>
+                        <button id="resetBtn" class="btn-primary secondary">Back to Start</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
